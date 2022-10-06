@@ -12,13 +12,13 @@ Book::Book(const std::string category, const std::string name, double price, int
 
 void Book::dump(std::ostream& os) const
 {
-    os << category_ << std::endl << name_ << std::endl << price_ << std::endl << qty_ << isbn_ << author_ << std:: endl;
+    os << category_ << std::endl << name_ << std::endl << price_ << std::endl << qty_ << std::endl << isbn_ << std::endl<< author_ << std:: endl;
 }
 
 std::string Book::displayString() const
 {
     std::string information;
-    information = category_ + name_ + "\n" + "Author: " + author_ +"\n" +" ISBN: " + isbn_ + "\n" + "Price: "+ "\n" + std::to_string(price_);
+    information = name_ + "\n" + "Author: " + author_ +" ISBN: " + isbn_ + "\n" + std::to_string(price_).substr(0,5) + " " + std::to_string(qty_) + " left.";
     return information;
 }
 

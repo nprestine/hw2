@@ -17,6 +17,12 @@ Men's Fitted Shirt
 25
 Medium
 J. Crew
+clothing
+Men's Not Fitted Shirt
+19.99
+25
+Medium
+J. Crew
 movie
 Hidden Figures DVD
 17.99
@@ -25,7 +31,9 @@ Drama
 PG
 </products>
 <users>
+trevor 20.00 1
 aturing 100.00 0
 johnvn 50.00 1
 adal 120.00 1
+n 200.00 1
 </users>
