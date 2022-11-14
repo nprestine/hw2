@@ -18,7 +18,7 @@ void Book::dump(std::ostream& os) const
 std::string Book::displayString() const
 {
     std::string information;
-    information = name_ + "\n" + "Author: " + author_ +" ISBN: " + isbn_ + "\n" + std::to_string(price_).substr(0,5) + " " + std::to_string(qty_) + " left.";
+    information = name_ + "\n" + "Author: " + author_ +" ISBN: " + isbn_ + "\n" + std::to_string(price_).substr(0,5) + " " + std::to_string(qty_) + " left." + "\n";
     return information;
 }
 

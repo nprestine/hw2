@@ -99,7 +99,7 @@ std::vector<Product*> mydatastore::search(std::vector<std::string>& terms, int t
 
 void mydatastore::addToCart(std::string username, Product* item){ //function to add items to cart 
      if(validUsername(username) == false){ //is the username valid
-        std::cout << "Invalid Username" << "\n";
+        std::cout << "Invalid request" << "\n";
         return;
     }if(carts_.find(username) == carts_.end()){ //they dont have a cart yet
         std::vector<Product*> cartcontent;
@@ -117,13 +117,13 @@ void mydatastore::dump(std::ostream& os){ //function to output data onto datafil
     for(unsigned int i = 0; i<allProducts_.size(); i++){ //output products
         allProducts_[i]->dump(os);
     }
-    os << "<products>" << "\n" << "<users>" << "\n";
+    os << "</products>" << "\n" << "<users>" << "\n";
     for(std::map<std::string, User*>::iterator it = allUsers_.begin(); it != allUsers_.end(); ++it){ //output users
         if(it->second != nullptr){
             (*it).second->dump(os);
     }
     }
-    os <<"<users>" << "\n";
+    os <<"</users>" << "\n";
 }
 
 void mydatastore::buyCart(std::string username){ //function to buy cart if constraints are met
@@ -152,12 +152,12 @@ void mydatastore::viewCart(std::string username){ //function to veiw cart if car
         return;
     }
     else{
-        std::cout << username << "'s cart:" << "\n";
+        //std::cout << username << "'s cart:" << "\n";
         std::vector<Product*> tempcart;
         tempcart = carts_.find(username)->second;
         int counter = 1;
         for(std::vector<Product*>::iterator it = tempcart.begin(); it != tempcart.end(); ++it){
-            std::cout << counter << "\n";
+            std::cout << "Item " << counter << "\n";
             std::cout << (*it)->displayString(); //not sure how to cout this
             std::cout << "\n";
             counter++;

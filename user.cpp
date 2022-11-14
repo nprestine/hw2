@@ -34,5 +34,5 @@ void User::deductAmount(double amt)
 
 void User::dump(std::ostream& os)
 {
-    os << name_ << " "  << balance_ << " " << type_ << endl;
+    os << name_ << " "  << std::setprecision(2) << std::fixed << balance_ << " " << type_ << endl;
 }

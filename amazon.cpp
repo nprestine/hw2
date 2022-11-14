@@ -104,6 +104,7 @@ int main(int argc, char* argv[])
             else if( cmd == "ADD"){
                 string tmpuser;
                 ss >>tmpuser;
+                tmpuser = convToLower(tmpuser);
                 size_t hitnum;
                 ss >>hitnum;
                 ds.addToCart(tmpuser,hits[hitnum-1]);

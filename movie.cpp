@@ -17,7 +17,7 @@ void Movie::dump(std::ostream& os) const
 std::string Movie::displayString() const
 {
     std::string information;
-    information = name_ + "\n" + "Genre: " + genre_ + " Rating: " + rating_ + "\n" + "Price: "+ std::to_string(price_).substr(0,5) + std::to_string(qty_) + " left." + "\n";
+    information = name_ + "\n" + "Genre: " + genre_ + " Rating: " + rating_ + "\n" + std::to_string(price_).substr(0,5) + " " + std::to_string(qty_) + " left." + "\n";
     return information;
 }
 
